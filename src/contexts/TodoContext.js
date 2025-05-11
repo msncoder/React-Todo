@@ -1,5 +1,6 @@
 import { createContext, useContext } from "react";
 
+// Global Storage
 export const TodoContext = createContext({
   todos: [
     {
@@ -14,8 +15,10 @@ export const TodoContext = createContext({
   toggleComplete: (id) => {},
 });
 
+// acesser
 export const useTodo = () => {
   return useContext(TodoContext);
 };
 
+// link provider
 export const TodoProvider = TodoContext.Provider;
